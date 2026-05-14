@@ -1,0 +1,40 @@
+[project]
+name = "supply-chain-fulfillment-mlops"
+version = "0.1.0"
+description = "Human-in-the-loop MLOps system for supply-chain fulfillment-rate prediction."
+requires-python = ">=3.10"
+dependencies = [
+    "joblib==1.4.2",
+    "numpy==2.1.3",
+    "pandas==2.2.3",
+    "pyyaml==6.0.2",
+    "scikit-learn==1.6.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.4",
+]
+mlops = [
+    "mlflow",
+    "zenml",
+]
+api = [
+    "fastapi==0.125.0",
+    "httpx==0.28.1",
+    "uvicorn==0.38.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["core", "steps", "pipelines"]

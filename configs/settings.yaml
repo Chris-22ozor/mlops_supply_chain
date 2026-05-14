@@ -1,0 +1,22 @@
+data:
+  product_inventory: data/Product_Inventory.csv
+  purchase_orders: data/Purchase_Orders.csv
+  sales_invoiced: data/Sales_Invoiced.csv
+
+target:
+  name: fulfillment_rate
+  formula: Quantity_Invoiced / Quantity_Ordered
+
+risk_bands:
+  critical_lt: 0.25
+  high_lt: 0.50
+  medium_lt: 0.75
+  low_lt: 0.99
+
+human_review:
+  fulfillment_rate_lt: 0.40
+  high_value_shortfall: 500000
+
+monitoring:
+  update_frequency: monthly
+  mae_degradation_trigger_pct: 15
