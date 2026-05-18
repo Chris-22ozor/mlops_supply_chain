@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: supply-chain-fulfillment-api:staging
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+

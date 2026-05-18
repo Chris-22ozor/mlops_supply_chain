@@ -178,6 +178,12 @@ Run it:
 docker run --rm -p 8000:8000 supply-chain-fulfillment-api
 ```
 
+Or with Compose:
+
+```powershell
+docker compose up --build
+```
+
 The image trains the model, creates the staging bundle, and starts the FastAPI app. It is still a staging image because production promotion is blocked by the metric gate.
 
 Prediction endpoint:
