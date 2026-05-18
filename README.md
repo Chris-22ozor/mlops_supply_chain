@@ -160,6 +160,10 @@ Health check:
 curl http://127.0.0.1:8000/health
 ```
 
+## CI
+
+The repository includes a GitHub Actions workflow that installs the project, runs the tests, and builds the distribution on every push to `main` and every pull request.
+
 Prediction endpoint:
 
 ```text
