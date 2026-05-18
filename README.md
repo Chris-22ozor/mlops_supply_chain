@@ -186,6 +186,8 @@ docker compose up --build
 
 The image trains the model, creates the staging bundle, and starts the FastAPI app. It is still a staging image because production promotion is blocked by the metric gate.
 
+The container also exposes a healthcheck against `GET /health`, so orchestration tools can see whether the staging API is alive.
+
 Prediction endpoint:
 
 ```text
