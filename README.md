@@ -164,6 +164,22 @@ curl http://127.0.0.1:8000/health
 
 The repository includes a GitHub Actions workflow that installs the project, runs the tests, and builds the distribution on every push to `main` and every pull request.
 
+## Docker
+
+Build the staging API image:
+
+```powershell
+docker build -t supply-chain-fulfillment-api .
+```
+
+Run it:
+
+```powershell
+docker run --rm -p 8000:8000 supply-chain-fulfillment-api
+```
+
+The image trains the model, creates the staging bundle, and starts the FastAPI app. It is still a staging image because production promotion is blocked by the metric gate.
+
 Prediction endpoint:
 
 ```text

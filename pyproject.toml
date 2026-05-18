@@ -37,4 +37,4 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["core", "steps", "pipelines"]
+include = ["api", "core", "steps", "pipelines"]
